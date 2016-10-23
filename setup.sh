@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo "== Setup bash_profile"
-cp -v ./bash_profile ~/.bash_profile
-cp -v ./bashrc ~/.bashrc
+cp -v ./bash/bash_profile ~/.bash_profile
+cp -v ./bash/bashrc ~/.bashrc
 
 echo "== Setup git"
 cp -v ./git/gitconfig ~/.gitconfig

@@ -17,7 +17,12 @@ export CLICOLOR='true'
 export LS_COLORS="gxfxcxdxBxegedabagacad"
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin
-export PATH=$PATH:$SDKMAN_CANDIDATES_DIR/scala/current/bin:$SDKMAN_CANDIDATES_DIR/current/sbt/bin:$SDKMAN_CANDIDATES_DIR/groovy/current/bin:$SDKMAN_CANDIDATES_DIR/gradle/current/bin
+export PATH=$PATH:\
+$SDKMAN_CANDIDATES_DIR/scala/current/bin:\
+$SDKMAN_CANDIDATES_DIR/current/sbt/bin:\
+$SDKMAN_CANDIDATES_DIR/groovy/current/bin:\
+$SDKMAN_CANDIDATES_DIR/gradle/current/bin:\
+$SDKMAN_CANDIDATES_DIR/activator/current/bin:\
 
 alias ll='ls -alh'
 

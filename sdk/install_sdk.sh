@@ -17,3 +17,4 @@ sdk install sbt
 sdk install scala
 sdk install groovy
 sdk install gradle
+sdk install activator

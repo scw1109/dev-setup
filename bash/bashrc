@@ -1,0 +1,45 @@
+# .bashrc
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Basic config
+export CLICOLOR_FORCE
+export LANG=zh_TW.UTF-8
+export _GREP_COLOR="--color=auto"
+_ENG_LOCALE=en_US.UTF-8
+export LC_TIME=C
+export LC_MESSAGES=C
+export LESS="-giMnrSw"
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin
+export PATH=$PATH:$SDKMAN_CANDIDATES_DIR/scala/current/bin:$SDKMAN_CANDIDATES_DIR/current/sbt/bin:$SDKMAN_CANDIDATES_DIR/groovy/current/bin:$SDKMAN_CANDIDATES_DIR/gradle/current/bin
+
+alias ll='ls -alh'
+
+# SSH management
+test_ssh_agent() {
+    ssh-add -l >/dev/null 2>&1
+    if [ $? -eq 2 ]; then
+        return 0
+    fi
+    return 1
+}
+
+if [ -t 0 ]; then
+    AGENT_PID=$HOME/.ssh-agent.`hostname -s`
+    if test_ssh_agent; then
+        if [ -f $AGENT_PID ]; then
+            . $AGENT_PID >/dev/null
+        fi
+    fi
+
+    if test_ssh_agent; then
+        echo "Starting a new SSH agent..."
+        ssh-agent -s > $AGENT_PID
+        chmod 600 $AGENT_PID
+        . $AGENT_PID
+    fi
+fi

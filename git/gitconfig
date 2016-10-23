@@ -1,0 +1,15 @@
+[github]
+        user = scw1109
+        user = scw1109
+[user]
+        name = scw1109
+        email = scw1109@gmail.com
+        name = scw1109
+[color]
+        ui = auto
+[alias]
+        lol = log --format=short --abbrev-commit --graph --decorate --all
+[core]
+        excludesfile = ~/.gitignore
+[push]
+        default = matching

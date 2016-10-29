@@ -25,3 +25,5 @@ Development environment setup
    * Bitstream vera sans mono
    * DejaVu sans mono
  * Docker
+ * Heroku comand line
+ * Travis CI command line

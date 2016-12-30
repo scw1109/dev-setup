@@ -19,11 +19,12 @@ Development environment setup
  * Clone this repository
  * In repository home, run ```./setup.sh```
 
+## Sync IDE config
+ * Use ```https://github.com/scw1109/idea-settings.git``` in IntelliJ IDEA to sync config.
+
 ## Other things to setup 
- * IntelliJ IDEA
  * Fonts (one of the following): 
    * Bitstream vera sans mono
    * DejaVu sans mono
- * Docker
  * Heroku comand line
  * Travis CI command line

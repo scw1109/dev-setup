@@ -17,4 +17,10 @@ echo "== Install common packages"
 echo "== Install SDK"
 ./sdk/install_sdk.sh
 
+echo "== Install IDE"
+./ide/install_ide.sh
+
+echo "== Install DevOps"
+./devops/install_devops.sh
+
 echo "Please run 'source ~/.bash_profile' to make sure the env is clean."

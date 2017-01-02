@@ -8,8 +8,9 @@ echo "== Setup git"
 cp -v ./git/gitconfig ~/.gitconfig
 cp -v ./git/gitignore ~/.gitignore
 
-echo "== Setup vim"
+echo "== Setup Editor"
 cp -v ./vim/vimrc ~/.vimrc
+./editor/install_editor.sh
 
 echo "== Install common packages"
 ./common/install_common.sh

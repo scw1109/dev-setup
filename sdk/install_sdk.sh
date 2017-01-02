@@ -18,3 +18,6 @@ sdk install scala
 sdk install groovy
 sdk install gradle
 sdk install activator
+
+echo "Setup python virtualenv ..."
+pip install virtualenv

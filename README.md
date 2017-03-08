@@ -22,8 +22,8 @@ Development environment setup
 ## Sync IDE config
  * Use ```https://github.com/scw1109/idea-settings.git``` in IntelliJ IDEA to sync config.
 
-## Other things to setup 
-### Fonts 
+## Other things to setup
+### Fonts
  * Using one of the following
    * [Bitstream vera sans mono](http://www.dafont.com/bitstream-vera-mono.font)
    * [DejaVu sans mono](https://www.fontsquirrel.com/fonts/dejavu-sans-mono)
@@ -31,3 +31,8 @@ Development environment setup
 ### Hosted services
  * [Travis CI command line](https://github.com/travis-ci/travis.rb#installation)
  * [Heroku comand line](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+ * [Ngrok](https://ngrok.com)
+
+   ```
+   brew cask install ngrok
+   ```

@@ -17,6 +17,8 @@ echo "== Install common packages"
 
 echo "== Install SDK"
 ./sdk/install_sdk.sh
+mkdir -p ~/bin
+cp -vr ./sdk/bin/ ~/bin/
 
 echo "== Install IDE"
 ./ide/install_ide.sh

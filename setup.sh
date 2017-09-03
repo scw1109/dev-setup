@@ -21,7 +21,7 @@ mkdir -p ~/bin
 cp -vr ./sdk/bin/ ~/bin/
 
 echo "== Install IDE"
-./ide/install_ide.sh
+#./ide/install_ide.sh
 
 echo "== Install DevOps"
 ./devops/install_devops.sh

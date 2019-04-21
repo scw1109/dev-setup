@@ -14,9 +14,9 @@ Development environment setup
      ```
      ssh-keygen -t rsa -b 2048 -C "`whoami`@`hostname` `date +%F`" -f <filename>
      ```
-   * EDCSA 256
+   * ECDSA 256
      ```
-     ssh-keygen -t edcsa -b 256 -C "`whoami`@`hostname` `date +%F`" -f <filename>
+     ssh-keygen -t ecdsa -b 256 -C "`whoami`@`hostname` `date +%F`" -f <filename>
      ```
 
 ### Working with Lastpass
@@ -30,9 +30,9 @@ Development environment setup
    ```
    printf "Bit Strength:2048\nFormat:rsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
    ```
-   * EDCSA
+   * ECDSA
    ```
-   printf "Bit Strength:256\nFormat:edcsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
+   printf "Bit Strength:256\nFormat:ecdsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
    ```
 
  * Fetch public key

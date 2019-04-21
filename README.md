@@ -37,12 +37,12 @@ Development environment setup
 
  * Fetch public key
    ```
-   lpass show --field="Public Key" <file>
+   lpass show --field="Public Key" <name>
    ```
 
  * Fetch private key into ssh-add
    ```
-   lpass show --field="Private Key" <file> | ssh-add -
+   lpass show --field="Private Key" <name> | ssh-add -
    ```
 
 ## Setup environmnet

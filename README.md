@@ -28,11 +28,11 @@ Development environment setup
  * Add key 
    * RSA
    ```
-   printf "Bit Strength:2048\nFormat:rsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
+   printf "Bit Strength:2048\nFormat:rsa\nPrivate Key:`cat <file>`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
    ```
    * ECDSA
    ```
-   printf "Bit Strength:256\nFormat:ecdsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
+   printf "Bit Strength:256\nFormat:ecdsa\nPrivate Key:`cat <file>`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
    ```
 
  * Fetch public key

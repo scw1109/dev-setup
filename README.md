@@ -37,7 +37,7 @@ Development environment setup
 
  * Fetch public key
    ```
-   lpass show --field="Publix Key" <file>
+   lpass show --field="Public Key" <file>
    ```
 
  * Fetch private key into ssh-add

@@ -9,10 +9,40 @@ Development environment setup
    ```
 
 ## Key generation
- * To generate a key, use this command
+ * To generate a key, use these commands
+   * RSA 2048
+     ```
+     ssh-keygen -t rsa -b 2048 -C "`whoami`@`hostname` `date +%F`" -f <filename>
+     ```
+   * EDCSA 256
+     ```
+     ssh-keygen -t edcsa -b 256 -C "`whoami`@`hostname` `date +%F`" -f <filename>
+     ```
 
+### Working with Lastpass
+ * Install lastpass-cli
    ```
-   ssh-keygen -t rsa -b 2048 -C "`whoami`@`hostname` `date +%F`" -f <filename>
+   brew install lastpass-cli
+   ```
+
+ * Add key 
+   * RSA
+   ```
+   printf "Bit Strength:2048\nFormat:rsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
+   ```
+   * EDCSA
+   ```
+   printf "Bit Strength:256\nFormat:edcsa\nPrivate Key:`cat <file>E`\nPublic Key:`cat <file>.pub`\nDate:MM,dd,yyyy\n" | lpass add --non-interactive --note-type=ssh-key --sync=now "SSH/<file>"
+   ```
+
+ * Fetch public key
+   ```
+   lpass show --field="Publix Key" <file>
+   ```
+
+ * Fetch private key into ssh-add
+   ```
+   lpass show --field="Private Key" <file> | ssh-add -
    ```
 
 ## Setup environmnet
